@@ -32,14 +32,21 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.temperatureTextField.delegate = self;
-    // set label to invisible on load
+    // set label to invisible 
     self.temperatureLabel.text = @" ";
+    //set keyboard to numbers only
+    self.temperatureTextField.keyboardType=UIKeyboardTypeDecimalPad;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)conversionDirectionSwitched:(id)sender;
+{
+    [self calculateTemperature];
 }
 
 -(void)calculateTemperature

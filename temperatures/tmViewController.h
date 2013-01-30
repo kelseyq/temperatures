@@ -16,6 +16,6 @@
 
 
 
-- (IBAction)fahrenheitPressed:(id)sender;
+- (IBAction)conversionDirectionSwitched:(id)sender;
 
 @end

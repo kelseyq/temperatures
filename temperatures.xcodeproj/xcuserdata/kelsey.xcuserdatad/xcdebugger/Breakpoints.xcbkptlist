@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "temperatures/tmViewController.m"
-         timestampString = "381223045.243215"
+         timestampString = "381253952.281111"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "70"
-         endingLineNumber = "70"
+         startingLineNumber = "77"
+         endingLineNumber = "77"
          landmarkName = "-calculateTemperature"
          landmarkType = "5">
       </FileBreakpoint>
