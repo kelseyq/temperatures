@@ -42,11 +42,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)fahrenheitPressed:(id)sender
-{
-    [self calculateTemperature];
-}
-
 -(void)calculateTemperature
 {
     [self.temperatureTextField resignFirstResponder];

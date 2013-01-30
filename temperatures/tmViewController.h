@@ -11,8 +11,6 @@
 @interface tmViewController : UIViewController <UITextFieldDelegate>
 
 @property(weak,nonatomic) IBOutlet UITextField *temperatureTextField;
-@property (weak, nonatomic) IBOutlet UIButton *fahrenheitButton;
-@property (weak, nonatomic) IBOutlet UIView *celsiusButton;
 @property(weak,nonatomic) IBOutlet UILabel *temperatureLabel;
 @property(weak,nonatomic) IBOutlet UISegmentedControl *conversionDirection;
 
