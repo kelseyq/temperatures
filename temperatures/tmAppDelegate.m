@@ -26,6 +26,38 @@
     return YES;
 }
 
+-(void)getLocation {
+    if(self.locationManager==nil){
+        _locationManager=[[CLLocationManager alloc] init];
+        _locationManager.delegate=self;
+        _locationManager.desiredAccuracy=kCLLocationAccuracyKilometer;
+        self.locationManager=_locationManager;
+    }
+    
+    if([CLLocationManager locationServicesEnabled]){
+        [self.locationManager startUpdatingLocation];
+    }
+
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
+    NSDate* eventDate = newLocation.timestamp;
+    NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
+    //check recency & accuracy before using
+    if (abs(howRecent) <  60.0)
+    {
+        if(newLocation.horizontalAccuracy < 1000.0){
+            NSLog(@"latitude %+.6f, longitude %+.6f\n",
+                  newLocation.coordinate.latitude,
+                  newLocation.coordinate.longitude);
+            
+            //turn off location services once we've gotten a good location
+            [manager stopUpdatingLocation];
+        }
+    }
+    
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

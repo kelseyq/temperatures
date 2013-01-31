@@ -7,6 +7,7 @@
 //
 
 #import "tmViewController.h"
+#import "tmAppDelegate.h"
 
 @interface tmViewController ()
 
@@ -26,27 +27,47 @@
     return ([string stringByTrimmingCharactersInSet:nonNumberSet].length > 0) || [string isEqualToString:@""];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self.temperatureTextField becomeFirstResponder];
-
-}
+//- (void)viewWillAppear:(BOOL)animated {
+//    [super viewWillAppear:animated];
+//    [self.temperatureTextField becomeFirstResponder];
+//
+//}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.temperatureTextField.delegate = self;
-    // set label to invisible 
+    // set labels to invisible 
     self.temperatureLabel.text = @" ";
+    self.locationLabel.text = @" ";
     //set keyboard to numbers only
     self.temperatureTextField.keyboardType=UIKeyboardTypeDecimalPad;
+}
+
+-(IBAction)backgroundTap:(id)sender{
+    NSLog(@"touchBackground was called");
+    [self.view endEditing:YES];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)locationButtonPressed:(id)sender; {
+    tmAppDelegate *appDelegate=(tmAppDelegate *)[UIApplication sharedApplication].delegate;
+    [appDelegate getLocation];
+    
+    if([CLLocationManager locationServicesEnabled]){
+        CLLocation *currentLocation=appDelegate.locationManager.location;
+        NSString *latLong = [NSString stringWithFormat:(@"latitude %+.6f, longitude %+.6f\n"),
+                             currentLocation.coordinate.latitude,
+                             currentLocation.coordinate.longitude];
+        NSLog(@"%@", latLong);
+        self.locationLabel.text = latLong;
+    }
 }
 
 - (IBAction)conversionDirectionSwitched:(id)sender;

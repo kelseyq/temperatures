@@ -13,7 +13,11 @@
 @property(weak,nonatomic) IBOutlet UITextField *temperatureTextField;
 @property(weak,nonatomic) IBOutlet UILabel *temperatureLabel;
 @property(weak,nonatomic) IBOutlet UISegmentedControl *conversionDirection;
+@property(weak,nonatomic) IBOutlet UIButton *locationButton;
+@property(weak,nonatomic) IBOutlet UILabel *locationLabel;
 
 - (IBAction)conversionDirectionSwitched:(id)sender;
+- (IBAction)locationButtonPressed:(id)sender;
+- (IBAction)backgroundTap:(id)sender;
 
 @end

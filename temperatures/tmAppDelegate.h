@@ -7,13 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @class tmViewController;
 
-@interface tmAppDelegate : UIResponder <UIApplicationDelegate>
+@interface tmAppDelegate : UIResponder <UIApplicationDelegate, CLLocationManagerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) tmViewController *viewController;
+
+@property (strong, nonatomic) CLLocationManager *locationManager;
+
+-(void)getLocation;
 
 @end

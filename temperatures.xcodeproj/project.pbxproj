@@ -19,6 +19,7 @@
 		DFEAB3AA16B23256003D35CE /* tmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFEAB3A916B23256003D35CE /* tmViewController.m */; };
 		DFEAB3AD16B23256003D35CE /* tmViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFEAB3AB16B23256003D35CE /* tmViewController_iPhone.xib */; };
 		DFEAB3BD16B24A8D003D35CE /* stock-thermometer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DFEAB3BC16B24A8D003D35CE /* stock-thermometer.jpg */; };
+		DFEAB3C716BA3FE9003D35CE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFEAB3C616BA3FE9003D35CE /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		DFEAB3A916B23256003D35CE /* tmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tmViewController.m; sourceTree = "<group>"; };
 		DFEAB3AC16B23256003D35CE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/tmViewController_iPhone.xib; sourceTree = "<group>"; };
 		DFEAB3BC16B24A8D003D35CE /* stock-thermometer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "stock-thermometer.jpg"; path = "../../../Downloads/stock-thermometer.jpg"; sourceTree = "<group>"; };
+		DFEAB3C616BA3FE9003D35CE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFEAB3C716BA3FE9003D35CE /* CoreLocation.framework in Frameworks */,
 				DFEAB39116B23256003D35CE /* UIKit.framework in Frameworks */,
 				DFEAB39316B23256003D35CE /* Foundation.framework in Frameworks */,
 				DFEAB39516B23256003D35CE /* CoreGraphics.framework in Frameworks */,
@@ -58,6 +61,7 @@
 		DFEAB38116B23256003D35CE = {
 			isa = PBXGroup;
 			children = (
+				DFEAB3C616BA3FE9003D35CE /* CoreLocation.framework */,
 				DFEAB39616B23256003D35CE /* temperatures */,
 				DFEAB38F16B23256003D35CE /* Frameworks */,
 				DFEAB38D16B23256003D35CE /* Products */,
@@ -299,6 +303,7 @@
 				DFEAB3B516B23256003D35CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
