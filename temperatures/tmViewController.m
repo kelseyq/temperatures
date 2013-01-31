@@ -43,11 +43,17 @@
     self.locationLabel.text = @" ";
     //set keyboard to numbers only
     self.temperatureTextField.keyboardType=UIKeyboardTypeDecimalPad;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    [tap setCancelsTouchesInView:NO];
+    [self.background setUserInteractionEnabled:NO];
+    [self.view addGestureRecognizer:tap];
 }
 
--(IBAction)backgroundTap:(id)sender{
+-(void)dismissKeyboard {
     NSLog(@"touchBackground was called");
-    [self.view endEditing:YES];
+    [self.temperatureTextField resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning

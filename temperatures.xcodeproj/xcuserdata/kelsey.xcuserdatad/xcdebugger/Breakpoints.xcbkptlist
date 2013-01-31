@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "temperatures/tmViewController.m"
-         timestampString = "381308460.849087"
+         timestampString = "381309266.671875"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "103"
-         endingLineNumber = "103"
+         startingLineNumber = "109"
+         endingLineNumber = "109"
          landmarkName = "-calculateTemperature"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "temperatures/tmViewController.m"
-         timestampString = "381308460.849087"
+         timestampString = "381309266.671875"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "65"
-         endingLineNumber = "65"
+         startingLineNumber = "71"
+         endingLineNumber = "71"
          landmarkName = "-locationButtonPressed:"
          landmarkType = "5">
       </FileBreakpoint>

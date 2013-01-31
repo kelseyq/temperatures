@@ -15,9 +15,9 @@
 @property(weak,nonatomic) IBOutlet UISegmentedControl *conversionDirection;
 @property(weak,nonatomic) IBOutlet UIButton *locationButton;
 @property(weak,nonatomic) IBOutlet UILabel *locationLabel;
+@property(weak,nonatomic) IBOutlet UIImageView *background;
 
 - (IBAction)conversionDirectionSwitched:(id)sender;
 - (IBAction)locationButtonPressed:(id)sender;
-- (IBAction)backgroundTap:(id)sender;
 
 @end
