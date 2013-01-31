@@ -21,6 +21,11 @@
     return YES;
 }
 
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSCharacterSet *nonNumberSet = [[NSCharacterSet characterSetWithCharactersInString:@"-0123456789."] invertedSet];
+    return ([string stringByTrimmingCharactersInSet:nonNumberSet].length > 0) || [string isEqualToString:@""];
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.temperatureTextField becomeFirstResponder];

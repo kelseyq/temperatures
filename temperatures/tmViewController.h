@@ -14,8 +14,6 @@
 @property(weak,nonatomic) IBOutlet UILabel *temperatureLabel;
 @property(weak,nonatomic) IBOutlet UISegmentedControl *conversionDirection;
 
-
-
 - (IBAction)conversionDirectionSwitched:(id)sender;
 
 @end
